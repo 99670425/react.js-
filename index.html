@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+		<meta name="screen-orientation" content="portrait">
+		<title>永利艺赏──人间乐园</title>
+		<link rel="stylesheet" type="text/css" href="css/scss/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/scss/index1.css"/>
+        <style>
+            .production1_p {
+                color: #fff;
+                font-size: .24rem;
+                line-height: .28rem;
+                position: absolute;
+                top: 4.50rem;
+                left: .45rem;
+            }
+			.all {
+				width: 100%;
+				height: 100vh;
+				display: block;
+			}
+			.heng {
+				display: none;
+			}
+			@media all and (orientation : landscape) {
+				.heng{height:100%;width:100%;text-align:center;background:#c52e27;position:absolute;z-index: 99999;display:block;}
+				.heng-p{color:#fff;font-size: 0.3rem;position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);}
+				.all {
+					display: none;
+				}
+			}
+        </style>
+	</head>
+	<body>
+		<div class="heng">
+			<p class="heng-p">请竖屏观看</p>
+		</div>
+		<div class="all">
+			<!-- 首页 -->
+			<div class="yongli-index">
+				<img src="img/index.png" alt="" class="index-img">
+				<div class="button" onclick="gotoCatalogue()">入园游览</div>
+				<div class="cl-box"></div>
+				<img src="img/logo.png" class="logo animated fadeIn">
+			</div>
+			<!-- 目录页 -->
+			<div class="yongli-catalogue">
+				<img src="img/logo2.png" alt="" class="catalogue-img logo-img">
+				<div class="buttons">
+					<div class="button" onclick="gotoIntroduce()"><img src="img/flower.png" class="flower"><span>乐园介绍</span></div>
+					<div class="button" onclick="gotoSelect()"><img src="img/flower.png" class="flower"><span>艺术大赏</span></div>
+					<div class="button" onclick="gotoVideo()"><img src="img/flower.png" class="flower"><span>光影艺苑</span></div>
+					<div class="button" onclick="gotoComing()"><img src="img/flower.png" class="flower"><span>至臻礼遇</span></div>
+				</div>
+				<div class="cl-box"></div>
+				<img src="img/logo.png" class="logo animated fadeIn">
+			</div>
+			<!-- 介绍页 -->
+			<div class="yongli-introduce yongli-pages">
+				<img src="img/logo2.png" alt="" class="introduce-img logo-img">
+				<img src="img/flower.png" alt="" class="flower">
+				<p class="introduce-p">
+					6月6日-10月6日，每日10时至22时*<br>
+					于「永利皇宫路氹」和「永利澳门」邂逅 <br>
+					永利艺赏──人间乐园 <br>流淌的艺术之美 <br>
+					<span>*6月6日开幕当天，展览将于晚上7时开始</span>
+				</p>
+				<div class="button" onclick="gobackCatalogue(this)">返回首页</div>
+				<div class="cl-box"></div>
+			</div>
+			<!-- 艺术品选择页 -->
+			<div class="yongli-select">
+				<img src="img/logo2.png" alt="" class="select-img logo-img">
+				<div class="swiper-container swiper-container1" id="swiper-container1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/production3.png" >
+						</div>
+						<div class="swiper-slide">
+							<img src="img/production2.png" >
+						</div>
+						<div class="swiper-slide">
+							<img src="img/production1.png" >
+							<p>&copy; Fabiano Caputo</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/production4.jpg" >
+						</div>
+					</div>
+					<button class="swiper-button-prev"></button><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+					<button class="swiper-button-next"></button><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+				</div>
+				<div class="swiper-container swiper-container2" id="swiper-container2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" onclick="gotoDetails()">
+							<div class="button1">
+								<div style="font-weight: bolder;">
+									<img src="img/flower.png" class="flower">《融化的记忆》
+								</div>
+								<span>拉菲克•安纳度</span>
+							</div>
+						</div>
+						<div class="swiper-slide" onclick="gotoDetails()">
+							<div class="button1">
+								<div style="font-weight: bolder;">
+									<img src="img/flower.png" class="flower">《赛伦斯•杜古德》
+								</div>
+								<span>珍妮弗•施丹琴 </span>
+							</div>
+						</div>
+						<div class="swiper-slide" onclick="gotoDetails()">
+							<div class="button1">
+								<div style="font-weight: bolder;">
+									<img src="img/flower.png" class="flower">《圣礼》
+								</div>
+								<span>艾杜雅多•特雷索迪</span>
+							</div>
+						</div>
+						<div class="swiper-slide" onclick="gotoDetails()">
+							<div class="button1">
+								<div style="font-weight: bolder;">
+									<img src="img/flower.png" class="flower">《澳门流》
+								</div>
+								<span>拉菲克•安纳度</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="button" onclick="gobackCatalogue1()">
+					<!--				<img src="img/flower.png" class="flower">-->
+					返回首页
+				</div>
+				<div class="cl-box"></div>
+			</div>
+			<!-- 艺术品介绍页 -->
+			<div class="yongli-details">
+				<div class="details-li">
+					<img src="img/production3_3.png" class="details-img">
+					<div class="details-message">
+						<div class="message-top">
+							<div class="message-top-name">
+								<img src="img/flower.png" class="flower">
+								<span class="message-top-name-span">《融化的记忆》</span>
+								<span class="message-top-span">&nbsp;—&nbsp;展于永利皇宫</span>
+							</div>
+							<div class="message-top-pro">
+								作品由数据油画、数据雕塑和光线投影组成，展示了数个跨学科的艺术计划，将记忆提取的神秘过程转化成数据蒐集，让我们仿佛置身于安纳度创造的「回忆」之中。
+							</div>
+						</div>
+						<div class="message-bottom">
+							<img src="img/production3_3_people.png" class="head" alt="">
+							<div class="right">
+								<h3>拉菲克•安纳度  </h3>
+								<p>把媒体艺术作品安装在建筑内，安纳度创造了一种没有物理现实的后数码建筑。他的作品探索人类对时间和空间的感知和经验如何发生剧烈的变化。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details-li">
+					<img src="img/production2_2.png" class="details-img">
+					<div class="details-message">
+						<div class="message-top">
+							<div class="message-top-name">
+								<img src="img/flower.png" class="flower">
+								<span class="message-top-name-span">《赛伦斯•杜古德》</span>
+								<span class="message-top-span">&nbsp;—&nbsp;展于永利皇宫</span>
+							</div>
+							<div class="message-top-pro">
+								作品的灵感来自富兰克林的电流理论，如梦似幻地阐释了电流如何在云中形成。雕刻和手绘的粒子犹如史前时代的洞穴岩画，手绘的雷电同样精致美丽。
+							</div>
+						</div>
+						<div class="message-bottom">
+							<img src="img/production2_2_people.png" class="head" alt="">
+							<div class="right">
+								<h3>珍妮弗•施丹琴</h3>
+								<p>媒体装置艺术家，其视频动画作品探索自然、建筑、当代社会问题、时间之流逝等多重主题。科技使自然产生扭曲和变化是施丹琴的招牌艺术主题。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details-li" style="position: relative;">
+					<img src="img/production1_1.png" class="details-img">
+					<p class="production1_p">&copy; Fabiano Caputo</p>
+					<div class="details-message">
+						<div class="message-top">
+							<div class="message-top-name" >
+								<img src="img/flower.png" class="flower">
+								<span class="message-top-name-span">《圣礼》</span>
+								<span class="message-top-span">&nbsp;—&nbsp;展于永利皇宫</span>
+							</div>
+							<div class="message-top-pro">
+								特雷索迪运用独一无二的技巧，以铁丝网来进行视觉投射，呈现一座带有强烈当代感的古典建筑，不仅向已然消逝的建筑物致敬，亦向应然而变的空间致敬。
+							</div>
+						</div>
+						<div class="message-bottom">
+							<img src="img/production1_1_people-1.png" alt="" class="head">
+							<div class="right">
+								<h3>艾杜雅多•特雷索迪 </h3>
+								<p>善于运用铁丝网等工业物料的透视感来进行艺术创作。其艺术作品融合古典和现代的语言，超越时间与空间的维度，促成艺术与世界之间的对话。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details-li" style="position: relative;">
+					<img src="img/production4_4.jpg" class="details-img">
+					<div class="details-message">
+						<div class="message-top">
+							<div class="message-top-name" >
+								<img src="img/flower.png" class="flower">
+								<span class="message-top-name-span">《澳门流》</span>
+								<span class="message-top-span">&nbsp;—&nbsp;展于永利皇宫</span>
+							</div>
+							<div class="message-top-pro">
+								《澳门流》是一座数据雕塑，其灵感来自每隔三十分钟收集的高频雷达数据。从30天里海平面的活动中收集而来的数据，通过一幅六米乘六米的LED媒体墙转化为充满诗意的美感经验。
+							</div>
+						</div>
+						<div class="message-bottom">
+							<img src="img/production3_3_people.png" class="head" alt="">
+							<div class="right">
+								<h3>拉菲克•安纳度  </h3>
+								<p>把媒体艺术作品安装在建筑内，安纳度创造了一种没有物理现实的后数码建筑。他的作品探索人类对时间和空间的感知和经验如何发生剧烈的变化。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btns">
+					<div class="button" onclick="gobackSelect()">返回</div>
+					<div class="button gotoNext" onclick="gotoNext()">继续浏览</div>
+				</div>
+			</div>
+			<!-- 敬请期待 -->
+			<div class="yongli-coming">
+				<img src="img/logo2.png" alt="" class="coming-img logo-img">
+				<div>
+					<img src="img/flower.png" class="flower">
+				</div>
+				<p>敬请期待</p>
+				<div class="button" onclick="gobackCatalogue1()">返回首页</div>
+			</div>
+			<!-- 视频页 -->
+			<div class="yongli-video">
+				<img src="img/logo2.png" alt="" class="video-img logo-img">
+				<p class="video-title">观看「艺文荟澳」政府官方宣传短片</p>
+				<div class="video-div">
+					<div class="video-box">
+						<!--<video x5-playsinline="true" playsinline="true" webkit-playsinline="true" controls="controls" id="video">
+							<source src="http://yongliqa.emkol.cn/signup/video1-1.mp4" type="video/mp4">
+						</video>-->
+					</div>
+					<div class="video-box1">
+						<img src="img/video-img1.png" class="video-play-img">
+						<div class="video_play"></div>
+					</div>
+				</div>
+				<div class="button" onclick="gobackCatalogue2()">返回首页</div>
+				<div class="cl-box"></div>
+			</div>
+			<!-- 卡券页 -->
+			<div class="yongli-card">
+				<img src="img/logo2.png" alt="" class="card-img logo-img">
+				<div class="card-div">
+					<div class="card-box">
+						<div class="card-left">
+							<p class="card-left-name">精选礼品或特饮</p>
+							<p class="card-left-text">凭券换领精选礼品或永利艺赏特饮</p>
+						</div>
+<!--						<div class="card-right" onclick="window.location.href=''">-->
+						<div class="card-right">
+							领取
+						</div>
+					</div>
+				</div>
+				<div class="button" onclick="gobackCatalogue1()">返回首页</div>
+				<div class="cl-box"></div>
+			</div>
+
+		</div>
+
+		<div style="display:none"><script type="text/javascript" src="https://s96.cnzz.com/z_stat.php?id=1277601887&web_id=1277601887"></script></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+<script>
+	// 预加载视频hack
+	function preload() {
+		$('#video')[0].play();
+		setTimeout(function () {
+			$('#video')[0].pause();
+		}, 200);
+	}
+	document.addEventListener("WeixinJSBridgeReady", preload, false);
+    //点击视频图片，播放视频
+	$(".video-box1").click(function(){
+		$(".video-box").show();
+		$('#video')[0].play();
+		$(".video-box1").hide();
+	});
+</script>
+<script>
+	//竖屏
+	function orient() {
+		if (window.orientation == 0 || window.orientation == 180) {
+			$("body").attr("class", "portrait");  //当竖屏的时候为body增加一个class
+			// console.log('竖屏');
+			orientation = 'portrait';
+			return false;
+		}
+		else if (window.orientation == 90 || window.orientation == -90) {
+			$("body").attr("class", "landscape"); //当横屏的时候为body移除这个class
+			// console.log('横屏');
+			orientation = 'landscape';
+			return false;
+		}
+	}
+	$(function(){
+		orient();
+	});
+	$(window).bind( 'orientationchange', function(e){
+		orient();
+	});
+</script>
+<script type="text/javascript">
+		var a;
+		var b;
+		// function swiper1(){
+			var Swiper1 = new Swiper('#swiper-container1',{
+				observer: true,
+				observeParents: true,
+				preventLinksPropagation:false,
+				// initialSlide :index,
+				navigation: {
+					nextEl: '#swiper-container1 .swiper-button-next',
+					prevEl: '#swiper-container1 .swiper-button-prev',
+				},
+				loop:true,
+			});
+			a = Swiper1;
+			var Swiper2 = new Swiper('#swiper-container2',{
+				observer: true,
+				observeParents: true,
+				preventLinksPropagation:false,
+				// initialSlide :index,
+				controller: {
+					control: Swiper1, //控制Swiper1
+				},
+				loop:true,
+			});
+			b = Swiper2;
+			Swiper1.controller.control = Swiper2;//Swiper1控制Swiper2，需要在Swiper2初始化后
+			Swiper2.controller.control = Swiper1;//Swiper2控制Swiper1，需要在Swiper1初始化后
+
+		// }
+
+	const home = $('.yongli-index');
+	const catalogue = $(".yongli-catalogue");
+	const introduce = $(".yongli-introduce");
+	const select = $(".yongli-select");
+	const details = $(".yongli-details");
+	const coming = $(".yongli-coming");
+	const video = $(".yongli-video");
+	const card = $(".yongli-card");
+
+	function gotoCatalogue(){
+		home.hide();
+		catalogue.css("display","flex");
+	}
+	function gotoIntroduce(){
+		catalogue.hide();
+		introduce.css("display","flex");
+	}
+	function gobackCatalogue(){
+		introduce.hide();
+		catalogue.css("display","flex");
+	}
+	function gobackCatalogue1(){
+		home.hide();
+		select.hide();
+		card.hide();
+		coming.hide();
+		catalogue.css("display","flex");
+		Swiper1.init();
+	}
+	function gobackCatalogue2(){
+		video.hide();
+		$('#video')[0].pause();
+		catalogue.css("display","flex");
+		Swiper1.init();
+	}
+	function gotoSelect(){
+		catalogue.hide();
+		coming.hide();
+		setTimeout(function(){
+			Swiper1.init();
+			// Swiper2.init();
+			// console.log(Swiper1.realIndex);
+			Swiper1.slideToLoop(0, 300, false);
+		},100);
+		select.css("display","flex");
+	}
+	//点击艺术品选择页里的 返回首页按钮
+	function gobackhome(){
+		select.hide();
+		home.css("display","flex");
+		// location.reload();//强制刷新页面
+	}
+	//点击轮播，去往艺术品详情页
+	var index;
+	function gotoDetails(){
+		index = a.realIndex;
+		// console.log(index);
+		select.hide();
+		details.css("display","flex");
+		details.find('.details-li').removeClass('active').eq(index).addClass("active");
+		// console.log(index);
+	}
+	//艺术品介绍页下面的返回按钮
+	function gobackSelect() {
+		details.hide();
+		select.css("display","flex");
+		// a.slideToLoop(index-1, 300, false);
+		setTimeout(function () {
+			a.slideToLoop(index, 300, false);
+		},100);
+		// a.slideToLoop(index-1, 300, false);
+	}
+	//点击艺术品介绍页下面的继续浏览按钮
+	function gotoNext() {
+		index++;
+		var detailsLiLength = $(".details-li").length;
+		if(index==detailsLiLength){
+			index=0;
+		}
+		details.find('.details-li').removeClass('active').eq(index).addClass("active");
+		// console.log('1--'+index);
+	}
+
+	//点击暂时没有的去往敬请期待页
+	function gotoComing(){
+		catalogue.hide();
+		coming.css("display","flex");
+	}
+	//点击目录页里的 光影艺苑，去往视频页
+	function gotoVideo(){
+		catalogue.hide();
+		video.css("display","flex");
+		var videoHtml = '<video x5-playsinline="true" playsinline="true" webkit-playsinline="true" controls="controls" id="video">\n' +
+				'<source src="http://yongliqa.emkol.cn/signup/video1-1.mp4" type="video/mp4">\n' +
+				'</video>';
+		$(".yongli-video .video-box").append(videoHtml);
+	}
+	//点击目录页里的 至臻礼遇，去往卡券页
+	function gotoCard(){
+		catalogue.hide();
+		card.css("display","flex");
+	}
+</script>
